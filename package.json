@@ -1,0 +1,34 @@
+{
+  "name": "@crawlo/entity-mongodb",
+  "version": "1.0.16",
+  "description": "Entity for MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crawlo/crawlo-mongodb.git#readme"
+  },
+  "keywords": [
+    "entity",
+    "mongodb"
+  ],
+  "author": "Crawlo",
+  "license": "ISC",
+  "dependencies": {
+    "@crawlo/entity": "^1.0.0",
+    "@crawlo/mongodb": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@crawlo/mongodb": "1.x",
+    "@crawlo/entity": "1.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@shelf/jest-mongodb": "^1.1.0",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  }
+}
