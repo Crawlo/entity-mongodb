@@ -5,14 +5,14 @@ import {
 import {
   default as MongoDB,
   ObjectID
-} from '@crawlo/mongodb'
+} from '@oudy/mongodb'
 
 beforeAll(
   () =>
-  MongoDB.configure(
-    global.__MONGO_DB_NAME__,
-    global.__MONGO_URI__
-  )
+    MongoDB.configure(
+      global.__MONGO_DB_NAME__,
+      global.__MONGO_URI__
+    )
 )
 
 class Country extends Entity {
@@ -47,18 +47,20 @@ test(
             console.log('Country on save  ', bind)
           }
         )
-        country.bind({
-          name: 'Moroccoa',
-          language: 'AR',
-          iso: 'MA'
-        }).then(
+        country.bind(
+          {
+            name: 'Moroccoa',
+            language: 'AR',
+            iso: 'MA'
+          }
+        ).then(
           bind =>
-          country.save(bind).then(
-            response => {
-              console.log(response)
-              resolve()
-            }
-          )
+            country.save(bind).then(
+              response => {
+                console.log(response)
+                resolve()
+              }
+            )
         )
       }
     )
